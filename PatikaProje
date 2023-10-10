@@ -1,0 +1,4 @@
+import numpy
+l = [[19,29,39],[True,False],[0.1,0.3,0.5],["y","z","a"," "]]
+jl= list(numpy.concatenate(l).flat)
+print(jl)
