@@ -2,3 +2,18 @@ import numpy
 l = [[19,29,39],[True,False],[0.1,0.3,0.5],["y","z","a"," "]]
 jl= list(numpy.concatenate(l).flat)
 print(jl)
+
+# Question 2 
+
+my_list = [["elma","kiraz"],[7,8,9],4,5,6,[1,2,3]]
+
+def reverse_list(my_list):
+    reversed_list = []
+    for item in my_list[::-1]:
+        if isinstance(item,list):
+            reversed_list.append(reverse_list(item))
+        else:
+            reversed_list.append(item)
+    return reversed_list
+output_2 = reverse_list(my_list)
+print(output_2)
